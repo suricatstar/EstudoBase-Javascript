@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+
+</head>
+<body>
+    
+    <h1>Verifica nacionalidade</h1>
+     <datalist id="lis">
+        <option>Brasil</option>
+        <option>EUA</option>
+     </datalist>
+    <label for="naci">Pais de origem:</label>
+    <input type="text" name="naci" id="naci" list="lis">
+   <input type="button" value="Verificar" onclick="nacional()">
+
+    <div id="res"></div>
+
+    <script>
+        function nacional() {
+            var loc = document.getElementById('naci').value
+            var res = document.getElementById('res')
+            res.innerHTML = `<p>Nasceu em ${loc}</p>`
+            console.log(loc)
+            if (loc == "Brasil") {
+                res.innerHTML += '<p>Você é <strong>Brasileiro</strong></p>'
+            } else {
+                res.innerHTML += '<p>Você é <strong>estrangeiro</strong></p>'
+            }
+
+        }
+    </script>
+</body>
+</html>

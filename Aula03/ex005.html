@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>primeiros passos com o DOM</title>
+    <style>
+        body{
+            background-color: rgb(49, 166, 216);
+            color: white;
+            font: normal 18pt arial;
+        }
+        abbr{
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Iniciando estudos com DOM</h1>
+    <p>aqui vai o resultado</p>
+    <p>Apredendo a usar o <strong><abbr title="Document Object Model">DOM</abbr></strong> em javaScript.</p>
+    <div id="msg">Clique em mim</div>
+
+    <!--lembrar da Árvore DOM (um dentro do outro: child, parent, descendent, ancestor)-->
+    <script>
+        var corpo = window.document.body;
+        var p1 = window.document.getElementsByTagName('p')[1];
+        
+        var d = document.querySelector('div#msg');
+        d.style.background = 'blue'
+
+        /*
+        var d = window.document.getElementById('msg');
+        d.style.background = 'green';
+        d.innerText = 'Estou aguardando...'
+        window.document.getElementById('msg').innerText = 'Olá';
+        document.write(p1.innerHTML)
+        corpo.style.background = 'black'
+        p1.style.color = 'red'
+        */
+    </script>
+</body>
+</html>
